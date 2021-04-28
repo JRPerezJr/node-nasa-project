@@ -1,12 +1,12 @@
 {
-  "name": "nasa-project",
+  "name": "nasa-project-api",
   "private": true,
   "version": "1.0.0",
   "engines": {
     "node": "14.15.1",
     "npm": "6.14.8"
   },
-  "description": "",
+  "description": "NASA Mission Control API",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,5 +19,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/JRPerezJr/node-nasa-project"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
