@@ -9,9 +9,11 @@
   "description": "NASA Mission Control API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd ../client && yarn start",
+    "server": "nodemon src/server.js",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Juan Perez Jr.",
@@ -21,6 +23,7 @@
     "url": "https://github.com/JRPerezJr/node-nasa-project"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
