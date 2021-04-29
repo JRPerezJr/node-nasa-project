@@ -15,7 +15,8 @@
     "start": "node src/server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "deploy": "concurrently --kill-others-on-fail \"yarn build\" \"yarn start\"",
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "keywords": [],
   "author": "Juan Perez Jr.",
