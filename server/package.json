@@ -10,9 +10,11 @@
   "main": "server.js",
   "scripts": {
     "client": "cd ../client && yarn start",
+    "build": "cd ../client && yarn build",
     "server": "nodemon src/server.js",
     "start": "node src/server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "deploy": "concurrently --kill-others-on-fail \"yarn build\" \"yarn start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
