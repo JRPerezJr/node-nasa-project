@@ -41,14 +41,14 @@ Runs 🏃🏻‍♀️ 🏃🏻‍♂️ app at [http://localhost:8000](http://l
 
 Builds React project and starts an Express cluster with PM2.
 
-### `yarn stop`
+#### `yarn stop`
 
 Stops the Express cluster.
 
-### `yarn delete`
+#### `yarn delete`
 
 Deletes the Express cluster.
 
-### `yarn reload`
+#### `yarn reload`
 
 Reloads the cluster one at a time.
