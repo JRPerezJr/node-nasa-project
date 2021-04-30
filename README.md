@@ -35,3 +35,20 @@ Runs all tests with Jest or will also watch for test changes with test-watch.
 
 Builds React project and starts Express server.
 
+Runs 🏃🏻‍♀️ 🏃🏻‍♂️ app at [http://localhost:8000](http://localhost:8000)
+
+#### `yarn deploy-cluster`
+
+Builds React project and starts an Express cluster with PM2.
+
+### `yarn stop`
+
+Stops the Express cluster.
+
+### `yarn delete`
+
+Deletes the Express cluster.
+
+### `yarn reload`
+
+Reloads the cluster one at a time.
