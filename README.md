@@ -2,7 +2,7 @@
 Using Kepler telescope csv data to find habitable planets.
 
 ## Architectural Map
-<p align="center"><a href="#" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/19915910/116652000-4405a380-a9bf-11eb-88bc-123183b12503.jpg" alt="nasa project architectural map" height="100%"/></a></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/19915910/116652000-4405a380-a9bf-11eb-88bc-123183b12503.jpg" alt="nasa project architectural map" height="100%"/></p>
 
 ## Technologies & Libraries Utilized:
 
