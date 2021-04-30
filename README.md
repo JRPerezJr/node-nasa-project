@@ -12,11 +12,11 @@ Express, Nodemon, Cors, CSV-Parse, Morgan, Jest, Supertest, PM2, and Concurrentl
 
 In the server directory, you can run:
 
-### `yarn`
+#### `yarn`
 
 Installs all dependencies.
 
-### `yarn dev`
+#### `yarn dev`
 
 Runs 🏃🏻‍♀️ 🏃🏻‍♂️ the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -25,11 +25,11 @@ Runs 🏃🏻‍♀️ 🏃🏻‍♂️ server at [http://localhost:8000](http:
 
 The server will reload if you make edits.<br>
 
-### `yarn test or yarn test-watch`
+#### `yarn test or yarn test-watch`
 
 Runs all tests with Jest or will also watch for test changes with test-watch.
 
-### `yarn deploy`
+#### `yarn deploy`
 
 Builds React project and starts Express server.
 
