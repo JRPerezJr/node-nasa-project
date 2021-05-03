@@ -20,12 +20,15 @@
     "stop": "pm2 stop server",
     "delete": "pm2 delete server",
     "reload": "pm2 reload server",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch"
   },
   "keywords": [],
   "author": "Juan Perez Jr.",
   "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/JRPerezJr/node-nasa-project"
