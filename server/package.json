@@ -34,6 +34,7 @@
     "url": "https://github.com/JRPerezJr/node-nasa-project"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "csv-parse": "^4.15.4",
     "dotenv": "^8.2.0",
