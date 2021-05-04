@@ -44,6 +44,11 @@ async function populateLaunches() {
     },
   });
 
+  if (response.status !== 200) {
+    console.log('Problem downloading launch.');
+    throw new Error('Launch data download failed');
+  }
+
   const launchDocs = response.data.docs;
 
   for (const launchDoc of launchDocs) {
@@ -54,16 +59,17 @@ async function populateLaunches() {
       flightNumber: launchDoc['flight_number'],
       mission: launchDoc['name'],
       rocket: launchDoc['rocket']['name'],
-      launchDate: launchDoc['data_local'],
+      launchDate: launchDoc['date_local'],
       upcoming: launchDoc['upcoming'],
       success: launchDoc['success'],
       customers,
     };
 
     console.log(`${launch.flightNumber} ${launch.mission}`);
+    await saveLaunch(launch);
   }
 
-  await saveLaunch(launch);
+  console.log('Launches saved to Mongo!');
 }
 async function loadLaunchData() {
   const firstLaunch = await findLaunch({
@@ -87,10 +93,6 @@ async function existsLaunchWithId(launchId) {
   return await findLaunch({ flightNumber: launchId });
 }
 
-async function getAllLaunches() {
-  return await launchesDatabase.find({}, { _id: 0, __v: 0 });
-}
-
 async function getLatestFlightNumber() {
   const latestLaunch = await launchesDatabase.findOne().sort('-flightNumber');
 
@@ -99,6 +101,10 @@ async function getLatestFlightNumber() {
   }
 
   return latestLaunch.flightNumber;
+}
+
+async function getAllLaunches() {
+  return await launchesDatabase.find({}, { _id: 0, __v: 0 });
 }
 
 async function saveLaunch(launch) {
