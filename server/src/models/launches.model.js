@@ -62,7 +62,8 @@ async function populateLaunches() {
 
     console.log(`${launch.flightNumber} ${launch.mission}`);
   }
-  // TODO: populate launches collection...
+
+  await saveLaunch(launch);
 }
 async function loadLaunchData() {
   const firstLaunch = await findLaunch({
